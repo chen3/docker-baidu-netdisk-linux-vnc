@@ -1,0 +1,19 @@
+version: '3.4'
+services:
+    app:
+        image: mx404/baidu-netdisk:2.0.1
+        restart: on-failure
+        restart: always
+        environment:
+            environment:
+            -   HTTP_PASSWORD=<password>
+    nginx:
+        image: nginx:1.17-alpine
+        ports:
+            -   "<port>:<port>"
+        restart: on-failure
+        depends_on:
+            -   app
+        volumes:
+            -   "./Web/conf.d:/etc/nginx/conf.d:ro"
+            -   "<key and pem file path>:/etc/certs:ro"
