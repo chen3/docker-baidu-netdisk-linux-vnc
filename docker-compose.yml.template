@@ -1,7 +1,7 @@
 version: '3.4'
 services:
     app:
-        image: mx404/baidu-netdisk:2.0.1
+        image: mx404/baidu-netdisk-vnc:2.0.1
         restart: on-failure
         restart: always
         environment:
