@@ -12,7 +12,7 @@ RUN apt-get update; \
     dpkg -i baidunetdisk_linux_2.0.1.deb; \
     rm baidunetdisk_linux_2.0.1.rpm; \
     rm baidunetdisk_linux_2.0.1.deb; \
-    apt-get --purge remove alien wget; \
+    apt-get --purge remove -y alien wget; \
     apt-get autoclean; \
     apt-get clean all; \
-    apt-get autoremove
+    apt-get autoremove -y
