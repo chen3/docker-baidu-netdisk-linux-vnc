@@ -1,9 +1,5 @@
 FROM dorowu/ubuntu-desktop-lxde-vnc:bionic-lxqt
 
-ENV LANG=zh_CN.UTF-8 \
-    LC_ALL=zh_CN.UTF-8
-    
-# download BaiduNetdisk
 RUN apt-get update; \
     apt-get install -y alien wget; \
     cd /tmp; \
